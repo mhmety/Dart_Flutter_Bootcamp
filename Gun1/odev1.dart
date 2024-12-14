@@ -3,7 +3,7 @@ void main() {
   String ilce = "Şarkişla";
 
   // Kıta bilgisi
-  String kita = "Avrupa";
+  String kita = "Avrupa/Asya";
 
   // Faks numarası
   String faks = "+90 555 123 4567";
