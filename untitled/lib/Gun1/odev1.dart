@@ -1,6 +1,6 @@
 void main() {
   // İlçe bilgisi
-  String ilce = "Şarkişla";
+  String ilce = "Şarkışla";
 
   // Kıta bilgisi
   String kita = "Avrupa/Asya";
@@ -21,7 +21,7 @@ void main() {
   int urunMiktari = 50;
 
   // Müşteri soyadı
-  String musteriSoyadi = "Yildiz";
+  String musteriSoyadi = "Yıldız";
 
   // Ödeme miktarı
   double odemeMiktari = 1500.75;
