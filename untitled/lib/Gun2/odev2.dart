@@ -1,62 +1,57 @@
-void main(){
-  // 1. Kilometreyi mile dönüştüren metot
-num convertKmToMiles(num km) {
-  return km * 0.621;
-}
-
-// 2. Dikdörtgenin alanını hesaplayan metot
-num calculateRectangleArea(num length, num width) {
-  return length * width;
-}
-
-// 3. Sayının faktoriyelini hesaplayan metot
-int calculateFactorial(int number) {
-  if (number <= 1) return 1;
-  return number * calculateFactorial(number - 1);
-}
-
-// 4. Kelime içinde kaç adet 'e' harfi olduğunu bulan metot
-int countECharacters(String word) {
-  return word.split('').where((char) => char == 'e').length;
-}
-
-// 5. Kenar sayısına göre her bir iç açıyı hesaplayan metot
-num calculatePolygonInteriorAngle(num sides) {
-  if (sides < 3) {
-    throw ArgumentError("Bir çokgenin en az 3 kenarı olmalıdır.");
+class Fonksiyonlar{
+  //km mile dönüştüren method
+  double kmToMile(int km){
+    double mile = km * 0.621;
+    return mile;
   }
-  return ((sides - 2) * 180) / sides;
-}
 
-// 6. Gün sayısına göre maaş hesaplayan metot
-num calculateSalary(int daysWorked) {
-  int totalHours = daysWorked * 8;
-  int overtimeHours = totalHours > 150 ? totalHours - 150 : 0;
-  int regularHours = totalHours - overtimeHours;
-  
-  return (regularHours * 40) + (overtimeHours * 80);
-}
-
-// 7. Otopark süresine göre ücret hesaplayan metot
-num calculateParkingFee(int hours) {
-  if (hours <= 0) {
-    return 0;
-  } else if (hours == 1) {
-    return 50;
-  } else {
-    return 50 + (hours - 1) * 10;
+  //dikdörtgenin alanını hesaplayan
+  int dikdortgenAlan(int genislik,int yukseklik){
+    int alan = genislik * yukseklik;
+    return alan;
   }
-}
 
+  //parametre olarak girilen değerin faktöriyelini hesaplayan fonksiyon
+  int faktoriyel(int sayi) {
+    int sonuc = 1;
+    for (int i = sayi; i > 0; i--) {
+      sonuc *= i;
+    }
+    return sonuc;
+  }
 
-  // Örnek kullanımlar
-  print("Kilometreyi Mile çevir: ${convertKmToMiles(10)} mile");
-  print("Dikdörtgenin Alanı: ${calculateRectangleArea(5, 4)}");
-  print("5 Faktöriyel: ${calculateFactorial(5)}");
-  print("Kelime içinde 'e' harfi sayısı: ${countECharacters("merhaba")}");
-  print("5 Kenarlı çokgenin iç açısı: ${calculatePolygonInteriorAngle(5)} derece");
-  print("Çalışılan gün sayısına göre maaş: ${calculateSalary(20)} ₺");
-  print("Otopark ücreti (3 saat): ${calculateParkingFee(3)} ₺");
+  //parametre olarak girilen e harfini say
+  int eHarfiniSay(String kelime) {
+    return kelime.split('').where((karakter) => karakter == 'e').length;
+  }
 
+  //kenar sayısına göre iç açıları bulan
+  int icAciHesapla(int kenarSayisi){
+    if(kenarSayisi < 3){
+      print("en az 3 kenar olmalıdır");
+
+    }
+    double sonuc = ((kenarSayisi - 2) * 180) / kenarSayisi;
+    return sonuc.toInt();
+  }
+
+  //gun sayisina gore maas hesabı
+  int maasHesapla(int gunSayisi) {
+    int toplamSaat = gunSayisi * 8;
+    int mesaiSaatleri = toplamSaat > 150 ? toplamSaat - 150 : 0;
+    int normalSaatler = toplamSaat - mesaiSaatleri;
+    return (normalSaatler * 40) + (mesaiSaatleri * 80);
+  }
+
+  //otopark ücretlendirmesi
+  int otoparkUcretiniHesapla(int saat) {
+    if (saat <= 0) {
+      return 0;
+    } else if (saat == 1) {
+      return 50;
+    } else {
+      return 50 + (saat - 1) * 10;
+    }
+  }
 
 }
