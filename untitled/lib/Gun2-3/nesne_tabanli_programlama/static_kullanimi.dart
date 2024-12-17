@@ -1,4 +1,4 @@
-import 'package:untitled/nesne_tabanli_programlama/Asinifi.dart';
+import 'package:untitled/Gun2-3/nesne_tabanli_programlama/Asinifi.dart';
 
 void main(){
 
