@@ -35,10 +35,10 @@ class _AnasayfaState extends State<Anasayfa> {
             padding: const EdgeInsets.only(top: 10),
             child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Chip(icerik: "Cheese"),
-                Chip(icerik: "Sausage"),
-                Chip(icerik: "Olive"),
-                Chip(icerik: "Pepper"),
+                CustomChip(icerik: "Cheese"),
+                CustomChip(icerik: "Sausage"),
+                CustomChip(icerik: "Olive"),
+                CustomChip(icerik: "Pepper"),
               ],
             ),
           ),
@@ -78,14 +78,26 @@ class _AnasayfaState extends State<Anasayfa> {
   }
 }
 
-class Chip extends StatefulWidget{
-  String icerik;
-  Chip({required this.icerik});
+class CustomChip extends StatefulWidget {
+  final String icerik;
+
+  CustomChip({required this.icerik});
 
   @override
-  Widget build(BuildContext context){
-    return TextButton(onPressed: (){},
-      child: Text(icerik, style: TextStyle(color:yaziRenk1),),
+  _CustomChipState createState() => _CustomChipState();
+}
+
+class _CustomChipState extends State<CustomChip> {
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        // Butonun işlevini buraya ekleyebilirsiniz
+      },
+      child: Text(
+        widget.icerik,
+        style: TextStyle(color: yaziRenk1),
+      ),
       style: TextButton.styleFrom(backgroundColor: anaRenk),
     );
   }

@@ -86,7 +86,7 @@ class _SifremiUnuttumState extends State<SifremiUnuttum> {
                         hintText: 'E-posta Giriniz',
                         hintStyle: TextStyle(color: yazi_renk2, fontSize: 18),
                         filled: true,
-                        fillColor: Colors.white.withOpacity(0.7),
+                        fillColor: ana_renk.withOpacity(0.7),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
