@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/login', // Başlangıç rotası
+      initialRoute: '/login',
       routes: {
-        '/login': (context) => const ProjeGirisEkran(), // Giriş ekranı rotası
-        '/register': (context) => const ProjeGiris(), // Kayıt ekranı rotası
+        '/login': (context) => const ProjeGirisEkran(),
+        '/register': (context) => const ProjeGiris(),
       },
     );
   }
